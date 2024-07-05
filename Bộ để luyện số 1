@@ -1,0 +1,87 @@
+## Độ khó cấp 1
+
+**`Câu 1:`** Truy vấn toàn bộ bảng dữ liệu từ bảng product
+
+**`Câu 2:`** Truy vấn ra 2 cột p_name và price
+
+**`Câu 3:`** Truy vấn ra toàn bộ bảng dữ liệu với điều kiện price nằm trong khoảng 10 đến 26
+
+**`Câu 4:`** Truy vấn toàn bộ bảng dữ liệu với điều kiện tên không phải là “Nail”
+
+**`Câu 5:`** Truy vấn ra mã sản phẩm và giá với điều kiện có chữ “ut” nằm trong tên
+
+## Độ khó cấp 2
+
+**`Câu 6:`** Truy vấn ra tên sản phẩm có giá không phải là 10
+
+**`Câu 7:`** Truy vấn danh sách tên viết tắt của sản phẩm của những sản phẩm có giá > 10 và có chữ “ut” trong tên
+
+**`Câu 8:`** Lấy ra danh sách sản phẩm và  phân loại  những sản phẩm có ngày sản xuất trong tháng 3 năm 2023.
+***Tiêu chí phân loại sản phẩm:***
+
+- Sản phẩm có mức giá lớn hơn 12 là ‘Medium’
+- Sản phẩm có mức giá lớn hơn 16 là ‘Expensive’
+- Các mức giá còn lại là ‘Cheap’
+
+**`Câu 9:`** Tìm ra sản phẩm có tên là ‘Nut’, ‘Screw’, ‘Washer’ và giá lớn 16 - Không sử dụng câu lệnh IN
+
+**`Câu 10:`** Lấy ra danh sách sản phẩm và phân loại của những sản phẩm ngày sản xuất lớn hơn hoặc bằng 30/3/2023 thì giá phải lớn hơn 17, các trường hợp còn lại thì giá nhỏ hơn 16.
+***Tiêu chí phân loại sản phẩm:***
+
+- Sản phẩm có mức giá lớn hơn 12 là ‘Medium’
+- Sản phẩm có mức giá lớn hơn 16 là ‘Expensive’
+- Các mức giá còn lại là ‘Cheap’
+
+## Độ khó cấp 3
+
+**Nhóm sản phẩm** được định nghĩa là chữ cái đầu tiên của tên sản phẩm (p_name)
+
+**`Câu 11:`** Tìm giá trung bình theo mỗi nhóm sản phẩm biết rằng chỉ quan tâm với những sản phẩm có giá lớn hơn 11
+
+**`Câu 12:`** Tìm danh sách tất cả sản phẩm có ký tự “_” ở trong tên
+
+**`Câu 13:`** Trắc nghiệm - Câu lệnh dưới đây sẽ trả về kết quả là gì? (Dựa theo bảng minh họa của bảng product
+
+```sql
+SELECT 
+	p_code
+	FROM product
+	WHERE launch_dt >= '2023-03-30'
+		OR price > 15
+		AND p_name != 'Nail';
+```
+
+**Đáp án A:** 1,4,5
+
+**Đáp án B:** 4,5 
+
+**Đáp án C:** 2,4,5 
+
+**Đáp án D:** 3,4,5
+
+### Độ khó cấp 4
+
+**`Câu 14:`** Tìm danh sách tên sản phẩm được viết hoa 2 chữ cái đầu và viết thường các chữ còn lại thỏa mãn điều kiện sau:
+
+- Nếu sản phẩm có tên có chữ “n” trong tên thì giá lớn hơn 11
+- Nếu sản phẩm có chữ “w” trong tên thì ngày sản xuất lớn hơn 2023/03/30
+- Các trường hợp còn lại giá nhỏ hơn 29
+
+**`Câu 15**:` Lấy ra những thông tin sau:
+
+- Ngày đầu tháng của ngày sản xuất ( Ví dụ: 2023/03/30 -> 2023/03/01 (Đầu tháng) )
+- Ngày đầu tuần của ngày sản xuất ( Ví dụ 2023/03/29 -> 2023/03/27 (Đầu tuần) )
+- Trong trường hợp ngày sản xuất bị NULL thì thay thành ngày cách ngày hiện tại 16 ngày
+- Loại bỏ dấu “_” và dấu cách “ “ ra khỏi tên sau đó viết hoa 2 chữ cái đầu và viết thường những chữ cái còn lại
+- Và phân loại chúng theo tiêu chí phân loại đã đề cập ở trên
+
+Của những sản phẩm có điều kiện sau: 
+
+- Có chữ “n” trong tên thì giá lớn hơn 16
+- Có chữ “s” trong tên thì giá nhỏ hơn 28
+
+***Tiêu chí phân loại sản phẩm:***
+
+- Sản phẩm có mức giá lớn hơn 12 là ‘Medium’
+- Sản phẩm có mức giá lớn hơn 16 là ‘Expensive’
+- Các mức giá còn lại là ‘Cheap’
