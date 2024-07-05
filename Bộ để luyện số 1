@@ -17,21 +17,38 @@ from product
 where price between 10 and 26
 
 **`Câu 4:`** Truy vấn toàn bộ bảng dữ liệu với điều kiện tên không phải là “Nail”
+Đáp án: 
+select *
+from product
+where p_name NOT LIKE 'Nail'
 
 **`Câu 5:`** Truy vấn ra mã sản phẩm và giá với điều kiện có chữ “ut” nằm trong tên
+Đáp án:
+select *
+from product
+where p_name LIKE '%ut%'
 
 ## Độ khó cấp 2
 
 **`Câu 6:`** Truy vấn ra tên sản phẩm có giá không phải là 10
+Đáp án: 
+select p_name
+from product
+where price <> 10
 
 **`Câu 7:`** Truy vấn danh sách tên viết tắt của sản phẩm của những sản phẩm có giá > 10 và có chữ “ut” trong tên
+Đáp án:
+select p_name
+from product
+where price <>10 and p_name like '%ut%'
 
-**`Câu 8:`** Lấy ra danh sách sản phẩm và  phân loại  những sản phẩm có ngày sản xuất trong tháng 3 năm 2023.
+**`Câu 8:`** Lấy ra danh sách sản phẩm và phân loại những sản phẩm có ngày sản xuất trong tháng 3 năm 2023.
 ***Tiêu chí phân loại sản phẩm:***
-
 - Sản phẩm có mức giá lớn hơn 12 là ‘Medium’
 - Sản phẩm có mức giá lớn hơn 16 là ‘Expensive’
 - Các mức giá còn lại là ‘Cheap’
+Đáp án:
+
 
 **`Câu 9:`** Tìm ra sản phẩm có tên là ‘Nut’, ‘Screw’, ‘Washer’ và giá lớn 16 - Không sử dụng câu lệnh IN
 
