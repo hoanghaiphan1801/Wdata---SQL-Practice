@@ -1,10 +1,20 @@
 ## Độ khó cấp 1
 
 **`Câu 1:`** Truy vấn toàn bộ bảng dữ liệu từ bảng product
+Đáp án: 
+SELECT *
+FROM product
 
 **`Câu 2:`** Truy vấn ra 2 cột p_name và price
+Đáp án:
+select p_name, price
+from product
 
 **`Câu 3:`** Truy vấn ra toàn bộ bảng dữ liệu với điều kiện price nằm trong khoảng 10 đến 26
+Đáp án:
+select *
+from product
+where price between 10 and 26
 
 **`Câu 4:`** Truy vấn toàn bộ bảng dữ liệu với điều kiện tên không phải là “Nail”
 
